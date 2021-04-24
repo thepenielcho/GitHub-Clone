@@ -47,6 +47,9 @@ user-scalable은 사용자가 화면 확대 축소를 시킬지말지 결정하�
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
 <!--  플러그인이나 라이브러리는 메인보다 무조건 앞에 호출해야!-->
   <link rel="stylesheet" href="css/main.css">
+
+<!--  body 태그 맨 뒤에 script를 넣을 게 아니라면 html을 다 읽은 후에 js를 적용한다는 defer 속성을 꼭 넣어줄 것!-->
+  <script defer src="main.js"></script>
 </head>
 <body>
   <div class="body__container">
@@ -66,7 +69,7 @@ user-scalable은 사용자가 화면 확대 축소를 시킬지말지 결정하�
 
         <div class="menu-group float--left">
           <div class="logo"><a href="#">GitHub</a></div>
-          <ul class="main-menu">
+          <ul class="main-menu toggle">
             <li><a href="#">Personal</a></li>
             <li><a href="#">Open Source</a></li>
             <li><a href="#">Business</a></li>
@@ -74,7 +77,7 @@ user-scalable은 사용자가 화면 확대 축소를 시킬지말지 결정하�
           </ul>
         </div>
 
-        <div class="sign-group float--right">
+        <div class="sign-group float--right toggle">
           <div class="btn-group">
             <a href="#" class="btn sign-in">Sign in</a>
             <a href="#" class="btn btn--primary sign-up">Sign up</a>
@@ -89,6 +92,8 @@ user-scalable은 사용자가 화면 확대 축소를 시킬지말지 결정하�
             <li><a href="#">Support</a></li>
           </ul>
         </div>
+
+        <div id="toggle-btn">Header Menu Toggle Button</div>
 
       </div>
     </header>
@@ -280,5 +285,6 @@ user-scalable은 사용자가 화면 확대 축소를 시킬지말지 결정하�
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?
   key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
+<!--  <script src="main.js"></script>-->
 </body>
 </html>
